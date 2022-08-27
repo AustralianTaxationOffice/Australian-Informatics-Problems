@@ -74,3 +74,8 @@ Welcome! I don't have every AIO solution, but I have a good handful. Have a brow
 ### A contributor who wants to submit a solution, author a solution explanation, or something else.
 
 Feel free to open a pull request for anything you feel might be additive to the value of this collection.
+
+### Someone who knows the creator of this repository in person.
+
+101.167.224.109
+i am living in your walls
