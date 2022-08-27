@@ -41,6 +41,7 @@
   | `aio16carmen` (_Carmen Sanfrancisco II: Bank Robbing_)         | 20   | S1       |
   | `aio15snap` (_Snap Dragons II_)                                | 100  | All      |
   | `aio15ruckus` (_Ruckus League_)                                | 20   | S1       |
+  | `aio12nort` (_NORT_)                                           | 100  | All      |
   | `aio12shuffle` (_Cabinet Shuffle_)                             | 100  | All      |
   | `aio12posters` (_Posters_)                                     | 100  | All      |
   | `aio11pirates` (_Pirates_)                                     | 100  | All      |
