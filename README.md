@@ -2,6 +2,9 @@
 
 ## Existing Solutions
 
+Be aware that non AC'd/full-marked problems should not have their solutions relied on.  
+The marks there are merely the highest my code has scored, not what the current code scores.
+
 <details>
   <summary>------------------------------------------------------------------------------------</summary>
   
