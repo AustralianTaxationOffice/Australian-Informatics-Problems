@@ -51,7 +51,7 @@
   | `aio10snap` (_Snap Dragons_)                                   | 100  | All      |
   | `aio10island` (_Island_)                                       | 50   | S1       |
   | `aio09sales` (_Travelling Salesperson_)                        | 100  | All      |
-  | ...                                                            | ...  | ...      |
+  | _Road to 120..._                                               | 38   | 82       |
   
 </details>
 
