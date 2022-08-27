@@ -52,7 +52,13 @@
   | `aio10snap` (_Snap Dragons_)                                   | 100  | All      |
   | `aio10island` (_Island_)                                       | 50   | S1       |
   | `aio09sales` (_Travelling Salesperson_)                        | 100  | All      |
-  | _Road to 120..._                                               | 38   | 82       |
+  | `aio09nom` (_Nomnomnom_)                                       | 100  | All      |
+  | `aio08ladybugs` (_Ladybugs_)                                   | 100  | All      |
+  | `aio06fashion` (_Fashion Statement_)                           | 100  | All      |
+  | `aio05cute` (_Cute Numbers_)                                   | 100  | All      |
+  | `aic03culture` (_Culture_)                                     | 100  | All      |
+  | `aic99hail` (_Hailstone Sequences_)                            | 100  | All      |
+  | _Road to 120..._                                               | 45   | 75       |
   
 </details>
 
