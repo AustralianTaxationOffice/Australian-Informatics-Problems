@@ -59,9 +59,15 @@ The marks there are merely the highest my code has scored, not what the current 
   | `aio08ladybugs` (_Ladybugs_)                                   | 100  | All      |
   | `aio06fashion` (_Fashion Statement_)                           | 100  | All      |
   | `aio05cute` (_Cute Numbers_)                                   | 100  | All      |
+  | `aio05curry` (_Curry_)                                         | 100  | All      |
+  | `aic04genius` (_Genius_)                                       | 100  | All      |
   | `aic03culture` (_Culture_)                                     | 100  | All      |
   | `aic99hail` (_Hailstone Sequences_)                            | 100  | All      |
-  | _Road to 120..._                                               | 45   | 75       |
+  | `oracgraphadjlist` (_Adjacency List_)                          | 100  | All      |
+  | `oracsortnotso` (_A Not So Simple Sort_)                       | 100  | All      |
+  | `oracsortmode` (_Pie a la Mode_)                               | 100  | All      |
+  | `oracsortswaps` (_Swapsies_)                                   | 100  | All      |
+  | _Road to 120..._                                               | 51   | 69       |
   
 </details>
 
