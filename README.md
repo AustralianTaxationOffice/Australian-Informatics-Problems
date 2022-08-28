@@ -67,7 +67,12 @@ The marks there are merely the highest my code has scored, not what the current 
   | `oracsortnotso` (_A Not So Simple Sort_)                       | 100  | All      |
   | `oracsortmode` (_Pie a la Mode_)                               | 100  | All      |
   | `oracsortswaps` (_Swapsies_)                                   | 100  | All      |
-  | _Road to 120..._                                               | 51   | 69       |
+  | `oracdatastacks3` (_Stacks_)                                   | 100  | All      |
+  | `oracdataqueues2` (_Queues 2_)                                 | 100  | All      |
+  | `oracdatastacksbracket` (_Bracket Matching_)                   | 100  | All      |
+  | `pre09primes` (_Twin Prime Conjecture_)                        | 100  | All      |
+  | `pre09pairs` (_Pairs_)                                         | 100  | All      |
+  | _Road to 120..._                                               | 56   | 64       |
   
 </details>
 
