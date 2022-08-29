@@ -12,6 +12,12 @@ The marks there are merely the highest my code has scored, not what the current 
   | :------------------------------------------------------------- | :--: | :------- |
   | `cf1003A` (_Polycarp's Pockets_)                               | AC   | All      |
   | `cf1030A` (_In Search of an Easy Problem_)                     | AC   | All      |
+  | `aio22election` (_Election II_)                                | 100  | All      |
+  | `aio22ground` (_Level Ground_)                                 | 100  | All      |
+  | `aio22tsp` (_TSP_)                                             | 100  | All      |
+  | `aio22buildings` (_Beautiful Buildings_)                       | 100  | All      |
+  | `aio22composing` (_Composing Pyramids_)                        | 100  | All      |
+  | `aio22spaceship` (_Spaceship Shuffle_)                         | 35   | S2       |
   | `aio21robot` (_Robot Vacuum_)                                  | 100  | All      |
   | `aio21artclass` (_Art Class II_)                               | 100  | All      |
   | `aio21melody` (_Melody_)                                       | 100  | All      |
@@ -72,7 +78,9 @@ The marks there are merely the highest my code has scored, not what the current 
   | `oracdatastacksbracket` (_Bracket Matching_)                   | 100  | All      |
   | `pre09primes` (_Twin Prime Conjecture_)                        | 100  | All      |
   | `pre09pairs` (_Pairs_)                                         | 100  | All      |
-  | _Road to 120..._                                               | 56   | 64       |
+  | `trial05qsort` (_Quicksort_)                                   | 100  | All      |
+  | `trial01gossip` (_Gossip Chains_)                              | 100  | All      |
+  | _Road to 120..._ (We are throwing a party at 100.)             | 63   | 57       |
   
 </details>
 

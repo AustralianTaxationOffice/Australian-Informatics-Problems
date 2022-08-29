@@ -20,33 +20,33 @@ int main()
 {
     piss(comp);
     int n;cin>>n;
-    int* pyr=new int[n];
-    multimap<int,int,greater<int>> ixs;
+    int pyr[n];
     for (int i=0;i<n;i++){
         int iv;cin>>iv;
         pyr[i]=iv;
-        ixs.insert(pair{iv,i});
     }
+    int lreq[100001]{0};
+    int rreq[100001]{0};
+    int bcl[n],bcr[n];
+    for (int i=0;i<n;i++){
+        lreq[pyr[i]]=lreq[pyr[i]-1]+1;
+        bcl[i]=lreq[pyr[i]];
+    }
+    for (int i=0;i<n;i++){
+        rreq[pyr[n-1-i]]=rreq[pyr[n-1-i]-1]+1;
+        bcr[i]=rreq[pyr[n-1-i]];
+    }
+    /*for (int i=0;i<n;i++){
+        cout<<bcl[i]<<'\t';
+    }
+    cout<<'\n';
+    for (int i=0;i<n;i++){
+        cout<<bcr[i]<<'\t';
+    }
+    cout<<'\n';*/
     int cr=0;
-    for (auto it=ixs.begin();it!=ixs.end();++it){
-        int bv=1;
-        int il=it->second,ir=it->second;
-        int ireq=it->first-1;
-        rt:
-        if (ireq==0||il<0||ir>=n){
-            p2:;
-            cr=max(cr,bv);
-            cout<<bv<<'\n';
-        }
-        else{
-            while (pyr[ir++]!=ireq)
-                if (ir>n)goto p2;
-            while (pyr[il--]!=ireq)
-                if (il<0)goto p2;
-            bv+=2;
-            --ireq;
-            goto rt;
-        }
+    for (int i=0;i<n;i++){
+        cr=max(cr,min(bcl[i],bcr[n-1-i]));
     }
-    cout<<n-cr<<'\n';
+    cout<<n-(cr*2-1)<<'\n';
 }

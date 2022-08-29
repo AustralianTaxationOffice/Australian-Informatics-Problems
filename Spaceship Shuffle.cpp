@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <numeric>
 using namespace std;
 #define speed() \
 ios::sync_with_stdio(false); \
@@ -8,40 +9,44 @@ cin.tie(0)
 speed(); \
 freopen(#name "in.txt","r",stdin); \
 freopen(#name "out.txt","w",stdout)
-#define ll long long
+#define int long long
 #define umap std::unordered_map
 #define ummap std::unordered_multimap
 #define uset std::unordered_set
 #define umset std::unordered_multiset
 #define mmap std::multimap
 #define mset std::multiset
-int main()
+signed main()
 {
     piss(space);
     int n;cin>>n;
-    int* cur=new int[n],*des=new int[n];
+    int ci[n],cd[n];
+    int cm[n],psa[n];
     for (int i=0;i<n;i++){
         int iv;cin>>iv;
-        cur[i]=iv;
+        ci[i]=iv;
     }
     for (int i=0;i<n;i++){
         int iv;cin>>iv;
-        des[i]=iv;
+        cd[i]=iv;
     }
+    for (int i=0;i<n;i++){
+        cm[i]=ci[i]-cd[i];
+    }
+    int sm=0;int sub=-2e9;
+    for (int i=0;i<n;i++){
+        sm+=cm[i];
+        psa[i]=sm;
+        //cout<<psa[i]<<' ';
+    }
+    //cout<<'\n';
     int cr=0;
-    for (int i=0;i<=n/2+(n%2!=0);i++){
-        cr+=abs(cur[i]-des[i]);
-        int sdif=(cur[i]-des[i]);
-        cout<<abs(cur[i]-des[i])<<'\n';
-        cur[i]-=sdif;
-        cur[i+1]+=sdif;
+    sub=(psa[0]-psa[n-1])/2ll;
+    for (int i=0;i<n;i++){
+        psa[i]-=sub;
+        cr+=abs(psa[i]);
+        //cout<<psa[i]<<' ';
     }
-    cr+=abs(cur[0]-des[0]);
-    int sdif=(cur[i]-des[i]);
-    cout<<abs(cur[i]-des[i])<<'\n';
-    cur[i]-=sdif;
-    cur[i+1]+=sdif;
-    for (int i=n-1;i>=n/2;i--){
-
-    }
+    //cout<<'\n';
+    cout<<cr<<'\n';
 }
