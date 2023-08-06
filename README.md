@@ -24,7 +24,7 @@ The marks there are merely the highest my code has scored, not what the current 
   | `aio21distancing` (_Social Distancing_)                        | 100  | All      |
   | `aio21space` (_Space Mission_)                                 | 100  | All      |
   | `aio21laser` (_Laser Cutter_)                                  | 100  | All      |
-  | `aio20baubles` (_Baubles_)                                     | 15   | S1       |
+  | `aio20baubles` (_Baubles_)                                     | 100  | All      |
   | `aio20cookies` (_Cookies_)                                     | 100  | All      |
   | `aio20ghost` (_Ghost Encounters_)                              | 100  | All      |
   | `aio20tennis` (_Tennis Robot_)                                 | 15   | S1       |
