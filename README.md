@@ -27,7 +27,7 @@ The marks there are merely the highest my code has scored, not what the current 
   | `aio20baubles` (_Baubles_)                                     | 100  | All      |
   | `aio20cookies` (_Cookies_)                                     | 100  | All      |
   | `aio20ghost` (_Ghost Encounters_)                              | 100  | All      |
-  | `aio20tennis` (_Tennis Robot_)                                 | 15   | S1       |
+  | `aio20tennis` (_Tennis Robot_)                                 | 100  | All      |
   | `aio19vases` (_Vases_)                                         | 100  | All      |
   | `aio19rps` (_RPS_)                                             | 100  | All      |
   | `aio19hire` (_Hiring Monks_)                                   | 100  | All      |
