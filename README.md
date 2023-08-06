@@ -17,7 +17,7 @@ The marks there are merely the highest my code has scored, not what the current 
   | `aio22tsp` (_TSP_)                                             | 100  | All      |
   | `aio22buildings` (_Beautiful Buildings_)                       | 100  | All      |
   | `aio22composing` (_Composing Pyramids_)                        | 100  | All      |
-  | `aio22spaceship` (_Spaceship Shuffle_)                         | 35   | S2       |
+  | `aio22spaceship` (_Spaceship Shuffle_)                         | 100  | All      |
   | `aio21robot` (_Robot Vacuum_)                                  | 100  | All      |
   | `aio21artclass` (_Art Class II_)                               | 100  | All      |
   | `aio21melody` (_Melody_)                                       | 100  | All      |
