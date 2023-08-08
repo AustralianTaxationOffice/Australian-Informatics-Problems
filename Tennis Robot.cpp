@@ -1,49 +1,63 @@
-#include <algorithm>
-#include <iostream>
-#include <vector>
-#include <queue>
-#include <unordered_map>
-#include <utility>
+#pragma GCC optimize("Ofast")
+
+#include<bits/stdc++.h>
 using namespace std;
-#define piss(in,out) \
-ios::sync_with_stdio(false); \
-cin.tie(0); \
-freopen(#in,"r",stdin); \
-freopen(#out,"w",stdout)
-int b,n;
-unordered_map<int,int> lr;
-int main()
-{
-    piss(tennisin.txt,tennisout.txt);
-    cin>>b>>n;
-    vector<int> bs;
-    for (int i=0;i<b;i++){
-        int a;
-        cin>>a;
-        bs.push_back(a);
+
+int main() {
+    freopen("tennisin.txt", "r", stdin);
+    freopen("tennisout.txt", "w", stdout);
+
+    int b, n; cin >> b >> n;
+
+    int a[b];
+    vector<int> r(b); // r: remaining number
+    for (int i = 0; i < b; i++) {
+        int c; cin >> c;
+        a[i] = c;
+        r[i] = c;
     }
-    int m=*max_element(bs.begin(),bs.end());
-    for (auto it=bs.begin();it!=bs.end();++it){
-        lr[*it-1]++;
-    }
-    int l=0;
-    int sub=bs.size();
-    while (n-sub>0){
-        n-=sub;
-        auto it=lr.find(l);
-        if (it!=lr.end())
-            sub-=it->second;
-        ++l;
-    }
-    int cr=-1;
-    for (int i=0;i<b;i++){
-        if (bs[i]>=l){
-            --n;
-        }
-        if (n==0){
-            cr=i+1;
-            break;
+
+    sort(r.begin(), r.end());
+    int sub = *min_element(r.begin(), r.end());
+
+    vector<int> subs; subs.push_back(sub); // the vector of all subtractions we're going to make
+    int bestValue = sub;
+    for (int i = 1; i < b; i++) {
+        int diff = r[i] - bestValue;
+        if (diff > 0) {
+            subs.push_back(diff);
+            bestValue = r[i];
         }
     }
-    cout<<cr<<'\n';
+
+    int remaining = b;
+    int totalsub = 0, j = 0, iter = 0;
+
+    while (n > sub * remaining) { // while it is safe to remove an entire chunk of sub
+        n -= sub * remaining;
+        totalsub += sub;
+        for (int i = j; i < b; i++) {
+            // subtract sub from all bins
+            r[i] -= sub;
+            if (r[i] == 0) {
+                j = i; // optimisation: we don't need to check the bins before this one
+                remaining--; // remove this bin
+            }
+        }
+
+        sub = subs[++iter];
+    }
+
+    // it is no longer safe to remove from everyone
+
+    vector<int> can_use; // bins that we can still use
+    for (int i = 0; i < b; i++) {
+        if (a[i] > totalsub) can_use.push_back(i);
+        // we can still use this bin as it has more capacity than what we used
+    }
+
+    int final_i = (n-1) % can_use.size();
+    int final_bin = can_use[final_i] + 1;
+
+    cout << final_bin << endl;
 }
