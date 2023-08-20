@@ -9,10 +9,9 @@ int main()
 {
     std::string fileName;
     std::string folderName;
-    std::cout << "Name of file: ";
-    std::cin >> fileName;
-    std::cout << "Name of folder: ";
-    std::cin >> folderName;
+    std::ifstream input_file("aiocompiler.txt");
+    input_file >> fileName;
+    input_file >> folderName;
     if (std::filesystem::exists(folderName + "/" + fileName + ".cpp"))
     {
         compile_file(fileName, folderName);
