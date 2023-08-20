@@ -10,18 +10,10 @@ int main(int argc, char* argv[])
 {
     if 
     (!(
-        argc == 3 ||
-        [&] {
-            if (argc == 2)
-            {
-                std::cout << "Warn! io file name not provided, input-output files will not be created!\n";
-                return true;
-            }
-            else return false;
-        } ()
+        argc == 3
     ))
     {
-        std::cout << "Error! Exactly two or three arguments must be used. Usage: aioutil [cxxname] [opt: ioname]\n";
+        std::cout << "Error! Exactly three arguments must be used. Usage: aioutil [cxxname] [ioname and foldername]\n";
         exit(-1);
     }
     std::string folderName = argv[2];
