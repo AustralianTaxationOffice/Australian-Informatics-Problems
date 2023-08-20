@@ -13,7 +13,7 @@ int main(int argc, char* argv[])
         argc == 3
     ))
     {
-        std::cout << "Error! Exactly three arguments must be used. Usage: aioutil [cxxname] [ioname and foldername]\n";
+        std::cout << "Error! Exactly three arguments must be used. Usage: aioutil [c++filename] [ioname and foldername]\n";
         exit(-1);
     }
     std::string folderName = argv[2];
