@@ -5,9 +5,10 @@
 
 namespace fs = std::filesystem;
 
+
 int main(int argc, char* argv[])
 {
-    if
+    if 
     (!(
         argc == 3 ||
         [&] {
@@ -23,17 +24,19 @@ int main(int argc, char* argv[])
         std::cout << "Error! Exactly two or three arguments must be used. Usage: aioutil [cxxname] [opt: ioname]\n";
         exit(-1);
     }
+    std::string folderName = argv[2];
+    fs::create_directory(folderName);
 
-    std::cout << "cxx File Name: " << argv[1] << '\n';
+    std::cout << "c++ File Name: " << argv[1] << '\n';
     if (argc == 3)
         std::cout << "io File Name: " << argv[2] << '\n';
 
     if
     (
-        fs::exists(std::string(argv[1]).append(".cpp")) ||
+        fs::exists(std::string(folderName + "/" + argv[1] + ".cpp")) ||
         [&] {
             if (argc == 3)
-                return fs::exists(std::string(argv[2]).append("in.txt")) || fs::exists(std::string(argv[2]).append("out.txt"));
+                return fs::exists(folderName + "/" + argv[2] + "in.txt") || fs::exists(folderName + "/" + argv[2] + "out.txt");
             else return false;
         } ()
     )
@@ -56,11 +59,16 @@ int main(int argc, char* argv[])
     {
         auto openCpp = [&]
         {
-            if (system(std::string("code -r \"").append(argv[1]).append(".cpp\"").c_str()) != 0)
+            std::string cppFilePath;
+            cppFilePath = argv[1];
+            cppFilePath += "/";
+            cppFilePath += argv[1];
+            cppFilePath += ".cpp";
+            if (system(std::string("code -r \"" + cppFilePath + "\"").c_str()) != 0)
                 std::cout << "Warn! Visual Studio Code CLI did not exit with code 0. (Opening " << argv[1] << ".cpp.\n";
         };
 
-        std::ofstream outcpp(std::string(argv[1]).append(".cpp"));
+        std::ofstream outcpp(folderName + "/" + argv[1] + ".cpp");
         if (argc == 3)
         {
             outcpp.write
@@ -91,14 +99,14 @@ signed main()
             outcpp.close();
 
             {
-                std::ofstream intxt(std::string(argv[2]).append("in.txt"));
-                std::ofstream outtxt(std::string(argv[2]).append("out.txt"));
+                std::ofstream intxt(folderName + "/" + argv[2] + "in.txt");
+                std::ofstream outtxt(folderName + "/" + argv[2] + "out.txt");
             }
 
             openCpp();
-            if (system(std::string("code -r \"").append(argv[2]).append("in.txt\"").c_str()) != 0)
+            if (system(std::string("code -r \"").append(folderName).append("/").append(argv[2]).append("in.txt\"").c_str()) != 0)
                 std::cout << "Warn! Visual Studio Code CLI did not exit with code 0. (Opening " << argv[2] << "in.txt.\n";
-            if (system(std::string("code -r \"").append(argv[2]).append("out.txt\"").c_str()) != 0)
+            if (system(std::string("code -r \"").append(folderName).append("/").append(argv[2]).append("out.txt\"").c_str()) != 0)
                 std::cout << "Warn! Visual Studio Code CLI did not exit with code 0. (Opening " << argv[2] << "out.txt.\n";
         }
         else
