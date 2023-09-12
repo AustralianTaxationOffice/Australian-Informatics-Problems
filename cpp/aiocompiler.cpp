@@ -31,13 +31,13 @@ void compile_file(std::string fileName, std::string folderName)
     
     
     std::cout << command << "\n";
-    std::cout << "Run this command? y/n";
+    std::cout << "Run this command? y/n: ";
     std::string request;
     std::cin >> request;
     if (request == "y")
     {
         system(command.c_str());
-        std::cout << "file compiled";
+        std::cout << "file compiled\n";
     }
     else
     {
